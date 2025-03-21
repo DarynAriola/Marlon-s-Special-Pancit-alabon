@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="with=device-width, initial-scale=1.0">
+   <title> Marlon's Special Pancit Malabon - Gapan City Branch </title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+</head>
+<body>
+<section class="Second-Main">
+   <nav>
+      <a href="index.html"><img src="Images/Marlon's Logo.png" alt="Marlon's Special Malabon Logo"></a>
+      <div class="navigation" id="navigation">
+         <i class="fa fa-times" onclick="hidetheMenu()"></i>
+         <ul> 
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <div class="dropdown">
+            <li><a href="Menu.html">FOOD MENU</a></li>
+            <div class="dropdown-content"> 
+               <a href="#Malabon" target="_blank">Our Specialty </a>
+               <a href="#Rice-Meals" target="_blank"> Rice Meals </a>
+               <a href="#Short-Orders" target="_blank"> Short Orders </a>
+               <a href="#Snacks" target="_blank"> Snacks </a>
+               <a href="#Drinks" target="_blank"> Drinks </a>
+            </div>
+            </div>
+            <li><a href="Contacts.html">CONTACTS</a></li>
+         </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showtheMenu()"></i>
+   </nav>
+   <h1> Contact Us</h1>
+</section>
+
+<!--Contacts-->
+<section class="Contact-Location">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.187154249568!2d120.94505671061643!3d15.312060985201537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397215bf48ef847%3A0x8c788319fd3a0c15!2sMarlon&#39;s%20Special%20Pancit%20Malabon!5e0!3m2!1sen!2sph!4v1741607328550!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="Contacts">
+   <div class="Contacts-Row"> 
+      <div class="Contacts-Column">
+         <div>
+            <i class="fa fa-home"></i>
+            <span>
+               <h4> 1st floor KSNR Bldg. J Malgapo St. Dist. 4 </h4>
+               <p> San Vicente Gapan City, Nueva Ecija, Philippines</p>
+            </span>
+         </div>
+         <div>
+            <i class="fa fa-phone"></i>
+            <span>
+               <h4> +63 0975 180 0911 </h4>
+               <p> Open from Monday to Sunday, 8AM to 5PM</p>
+            </span>
+         </div>
+      </div>
+
+      <div class="Contacts-Column"> 
+         <form action=""> 
+            <input type="text" placeholder="Enter Your Name" required> 
+            <input type="email" placeholder="Enter Email Adress" required> 
+            <textarea rows="8" placeholder="Write Your Message!" required> </textarea>
+            <button type="submit" class="New-Tab New-Red-Tab"> Send Message </button>
+         </form>
+      </div>
+   </div>
+   </div>
+</section>
+
+<!--Footer: Other Media-->
+<section class="Footer-Media">
+   <h3> Our Social Media Contacts </h3>
+   <p> You can also follow us on our social media accounts for more updates on our products and many more!</p>
+<div class="Media-Icons">
+   <a href=""><i class="fab fa-facebook"></i></a>
+   <a href=""><i class="fab fa-twitter"></i></a>
+   <a href=""><i class="fab fa-instagram"></i></a>
+   <a href=""><i class="fab fa-youtube"></i></a>
+</div>
+   <p> © 2025 Marlon's Special Pancit Malabon - Gapan City Branch. All Rights Reserved </p>  
+</section>
+
+<!--Script for Menu-->
+<script>
+var navigation = document.getElementById("navigation");
+function showtheMenu(){
+   navigation.style.right = "0";
+}
+function hidetheMenu(){
+   navigation.style.right = "-220px";
+}
+
+window.addEventListener('load', function () {
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+    if (window.innerWidth <= 700) {
+        dropdownLinks.forEach(link => link.removeAttribute('target'));
+    }
+});
+</script>
+
+
+</body>
+</html>

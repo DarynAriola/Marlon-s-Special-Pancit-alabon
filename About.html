@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="with=device-width, initial-scale=1.0">
+   <title> Marlon's Special Pancit Malabon - Gapan City Branch </title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+</head>
+<body>
+<section class="Second-Main">
+   <nav>
+      <a href="index.html"><img src="Images/Marlon's Logo.png" alt="Marlon's Special Malabon Logo"></a>
+      <div class="navigation" id="navigation">
+         <i class="fa fa-times" onclick="hidetheMenu()"></i>
+         <ul> 
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <div class="dropdown">
+            <li><a href="Menu.html">FOOD MENU</a></li>
+            <div class="dropdown-content"> 
+               <a href="#Malabon" target="_blank">Our Specialty </a>
+               <a href="#Rice-Meals" target="_blank"> Rice Meals </a>
+               <a href="#Short-Orders" target="_blank"> Short Orders </a>
+               <a href="#Snacks" target="_blank"> Snacks </a>
+               <a href="#Drinks" target="_blank"> Drinks </a>
+            </div>
+            </div>
+            <li><a href="Contacts.html">CONTACTS</a></li>
+         </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showtheMenu()"></i>
+   </nav>
+   <h1> About Our Shop </h1>
+</section>
+
+<!--About: Shop Content-->
+<section class="Shop-Content" id="ABOUT">
+   <div class="Content-Row">
+      <div class="Content-Column"> 
+         <div class="Border">
+         <h2> Our Restaurant History </h2>
+         <p> Marlon's Special Pancit Malabon offers only the most special Pancit Malabon made using our own unique family recipe which was passed down from the bloodlines of our generations. Famous for it's delicious ans exceptional taste that will surely make you come back for more, tested and proven by our satisfied regular customers. </p>
+         <p> Our shop is also known for selling other top-rated Filipino cuisines and dishes made from only the freshest and finest ingredients ranging from sweet desserts to appetizing meals. </p>
+         <p> We are located at the 1st floor of KSNR Bldg. at J. Malgapo St. District 4 San Vicente of Gapan City, Nueva Ecija, open from 8:00 AM to 5:00 PM from Monday to Sunday. </p>
+         <p> We accept and offer dine-in or take-out requests and food delivery services to those who are unable to visit our shop and deliver it to wherever you may be.</p>
+         </div>
+      </div>
+         <div class="Content-Column"> 
+            <img src="Images/MalabonFamily.png" alt="Our Family">
+         </div>
+   </div>
+</section>
+
+
+<!--Footer: Other Media-->
+<section class="Footer-Media">
+   <h3> Our Social Media Contacts </h3>
+   <p> You can also follow us on our social media accounts for more updates on our products and many more!</p>
+<div class="Media-Icons">
+   <a href=""><i class="fab fa-facebook"></i></a>
+   <a href=""><i class="fab fa-twitter"></i></a>
+   <a href=""><i class="fab fa-instagram"></i></a>
+   <a href=""><i class="fab fa-youtube"></i></a>
+</div>
+   <p> © 2025 Marlon's Special Pancit Malabon - Gapan City Branch. All Rights Reserved </p>  
+</section>
+
+<!--Script for Menu-->
+<script>
+var navigation = document.getElementById("navigation");
+function showtheMenu(){
+   navigation.style.right = "0";
+}
+function hidetheMenu(){
+   navigation.style.right = "-220px";
+}
+
+window.addEventListener('load', function () {
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+    if (window.innerWidth <= 700) {
+        dropdownLinks.forEach(link => link.removeAttribute('target'));
+    }
+});
+</script>
+
+
+</body>
+</html>

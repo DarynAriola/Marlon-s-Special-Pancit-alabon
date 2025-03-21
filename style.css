@@ -1,0 +1,660 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "STIX Two Text", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+.Main{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(Images/Background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    padding: 2.5% 7%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+    height: auto;
+}
+.navigation {
+    flex: 1;
+    text-align: right;
+}
+.navigation ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 6px 10px;
+    position: relative;
+}
+.navigation ul li::after {
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: #add8e6;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.navigation ul li:hover:after {
+    width: 100%;
+}
+.navigation ul li a {
+   color:#ffffff;
+   text-decoration: none;
+   font-size: 15px;
+}
+.Front {
+    width: 80%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.Front h1 {
+    font-size: 55px;
+    text-shadow: #000000 2px 2px 4px;
+}
+.Front p {
+    margin: 12px 0 42px;
+    font-size: 15px;
+    color: #ffffff;
+    text-shadow: #000000 2px 2px 4px;
+}
+.New-Tab {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 30px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.New-Tab:hover{
+    border: 2px solid #ffa500;
+    background: #ffa500;
+    transition: 2s;
+}
+nav .fa {
+    display: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f53b3b;
+    min-width: 160px;
+    z-index: 1;
+  }
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+.dropdown-content a:hover {
+    background-color: #eeeb42
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+@media(max-width: 700px) {
+    .Front h1 {
+        font-size: 25px;
+    }
+    .navigation ul li{
+        display: block;
+    }
+    .navigation {
+        position: fixed;
+        background: #ff8c00;
+        height: 100vh;
+        width: 220px;
+        top: 0;
+        right: -220px;
+        text-align: left;
+        z-index: 2;
+        transition: 1.5s;
+    }
+    .navigation ul{
+        padding: 10px;
+    }
+    nav .fa{
+        display: block;
+        color: #ffffff;
+        margin: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    nav img {
+        width: 90px;
+        height: auto;
+    }
+}
+/**For What We Offer**/
+
+.First {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background: #f5e025;
+}
+.First h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+.First p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #000000;
+}
+.First-Box {
+    width: 20%;
+    padding: 2px;
+    flex-basis: 30%;
+    border-radius: 15px;
+    margin: 0 10px 30px 10px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.First-Line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.First-Line::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.First-Box img, .First-Box-Second img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+.Photo-Layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+.Photo-Layer:hover {
+    background: #00c5f7;
+}
+.Photo-Layer h2 {
+    color: #ffffff;
+    font-size: 25px;
+    width: 100%;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
+}
+.Photo-Layer:hover h2 {
+    bottom: 48%;
+    opacity: 1;
+}
+.Photo-Layer h3 {
+    color: #ffffff;
+    font-size: 40px;
+    width: 100%;
+    font-weight: 600;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
+}
+.Photo-Layer:hover h3 {
+    bottom: 48%;
+    opacity: 1;
+}
+@media screen and (max-width: 700px) {
+    .First-Line{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .First h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .First-Box {
+        width: 90%;
+    }
+}
+
+/**For Other Products We Offer**/
+.Second {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 90px;
+    background: #f5e025;
+}
+.Second h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+.Second p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #000000;
+}
+.Second-Box {
+    width: 33.33%;
+    padding: 2px;
+    flex-basis: 30%;
+    border-radius: 15px;
+    margin: 0 15px 40px 15px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.Second-Line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Second-Line::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.Second-Box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+.Photo-Layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+.Photo-Layer:hover {
+    background: #00c5f7;
+}
+.Photo-Layer h2 {
+    color: #ffffff;
+    font-size: 25px;
+    width: 100%;
+    font-weight: 600;
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
+}
+.Photo-Layer:hover h2 {
+    bottom: 48%;
+    opacity: 1;
+}
+@media screen and (max-width: 700px) {
+    .Second-Line{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Second h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .Second-Box {
+        width: 90%;
+    }
+    .Photo-Layer h2 {
+        font-size: 20px;
+    }
+}
+
+
+/**For Ratings**/
+
+.Third {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    background: #f5e025;
+}
+.Third h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+.Third p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #000000;
+}
+.Ratings {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    text-align: justify;
+    background: #c8fffc;
+    padding: 20px;
+    display: flex;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: #000000;
+}
+.Ratings img {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+.Ratings p {
+    padding: 0;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.Ratings h3 {
+    text-align: left;
+    margin-top: 20px;
+}
+.Ratings .fa {
+    margin-top: 10px;
+    color: #fffb00;
+    font-size: 20px;
+}
+.Ratings .fa-regular {
+    color: #fffb00;
+    font-size: 20px;
+}
+@media (max-width: 700px) {
+    .Ratings img {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+/**For Contact Us**/
+.Contact-Us {
+    margin: 95px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Images/Contacts.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    text-align: center;
+    padding: 90px 0;
+}
+.Contacting-Us {
+    background: #f5e025;
+    padding: 50px 0;
+    background-color: #f5e025;
+}
+.Contact-Us h1 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    padding: 0;
+    text-shadow: #000000 2px 2px 4px;
+}
+@media (max-width: 700px) 
+{
+    .Contact-Us h1 {
+        font-size: 25px;
+    }
+}
+
+/**For Footer**/
+.Footer-Media {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    background: #00c5f7
+}
+.Footer-Media h3 {
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 25px;
+}
+.Media-Icons {
+    color: #2387e4;
+    margin: 0 10px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+/**About Us**/
+.Second-Main {
+    height: 55vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Images/Background\ 3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-shadow: #000000 2px 2px 4px;
+    text-align: center;
+}
+.Second-Main h1 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+.Shop-Content {
+    width: 100%;
+    margin: auto;
+    padding-top: 75px;
+    padding-bottom: 45px;
+    font-size: 40px; 
+    background: #f5e025;
+}
+.Content-Column {
+    padding: 30px 2px;
+    flex-basis: 48%;
+    text-align: justify;
+    margin: 5%;
+}
+.Content-Column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.Content-Column h2 {
+    padding-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+.Content-Column p {
+    padding: 5px 0 10px;
+    font-size: 20px;
+}
+.New-Red-Tab {
+    border: 1px solid #ffa500;
+    background: transparent;
+    color: #ffa500;
+}
+.New-Red-Tab:hover {
+    color: #ffffff;
+
+}
+.Border {
+    background:#fff3f3;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 20px;
+}
+.Border:hover {
+    box-shadow: 0 0 30px 10px rgb(0, 0, 0, 0.5 )
+}
+@media (max-width: 700px) {
+    .Content-Column {
+        width: 95%;
+        text-align: center;
+        margin: 20px 5px;
+    }
+    .Content-Column img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .Shop-Content {
+        font-size: 25px;
+    }
+    .Content-Column h2 {
+        font-size: 30px;
+    }
+    .Content-Column p {
+        font-size: 15px;
+    }
+}
+
+/**Food Menu**/ 
+.Menu-Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 90px;
+}
+.Menu {
+    width: 350px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px;
+}
+.Menu:hover {
+    box-shadow: 0 0 30px 10px rgb(0, 0, 0, 0.5);
+    opacity: 1;
+    transform: scale(1.1);
+}
+.Menu img {
+    width: 100%;
+    height: auto;
+}
+.Menu-Content {
+    padding: 15px;
+}
+.Menu-Content h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.Menu-Content p {
+    color: #000000;
+    font-size: 25px;
+}
+.Menu-Content h3 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+@media (max-width: 700px) {
+    .Menu {
+        width: 250px;
+        margin: 20px;
+    }
+    .Menu-Content h2 {
+        font-size: 26px;
+    }
+    .Menu-Content p {
+        font-size: 18px;
+    }
+    .Menu-Content h3 {
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+}
+
+
+/**Contacts**/
+.Contact-Location {
+    width: 100%;
+    margin: auto;
+    padding: 75px 0;
+    padding-left: 5%;
+    background:#f5e025;
+}
+.Contact-Location iframe {
+    width: 90%;
+}
+.Contacts {
+    width: 100%;
+    margin: 0;
+    padding: 90px 25px;
+    background:#f5e025;
+    box-sizing: border-box;
+}
+.Contacts-Column {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+}
+.Contacts-Column div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+.Contacts-Column div .fa {
+    font-size: 30px;
+    color: #f53b3b;
+    margin: 15px;
+    margin-right: 35px;
+}
+.Contacts-Column div p {
+    padding: 0;
+}
+.Contacts-Column div h4 {
+    font-size: 22px;
+    margin-bottom: 7px;
+    color: #000000;
+    font-weight: 500;
+}
+.Contacts-Column input, .Contacts-Column textarea {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 22px;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    box-sizing: border-box;
+}
+textarea::placeholder {
+    color: #777777; 
+    font-size: 15px; 
+    opacity: 1; 
+}
